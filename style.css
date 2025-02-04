@@ -1,0 +1,87 @@
+.nav {
+  background-color: rgb(10, 122, 188);
+  height: 100%; /* changed to 100% */
+  display: flex; /* added flexbox for vertical centering */
+  flex-direction: column; /* stack links vertically */
+}
+
+.nav a {
+  font-size: x-large;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 10px; /* added padding for box */
+  margin: 5px; /* added margin for spacing */
+  border: 2px solid white; /* added border */
+  transition: background-color 0.3s ease; /* smooth transition */
+}
+
+.nav a:hover {
+  background-color: rgb(135, 206, 235); /* change color on hover */
+}
+
+#bold {
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+button {
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+  font-size: x-large;
+}
+
+button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
