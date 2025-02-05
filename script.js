@@ -36,7 +36,6 @@ function showBrowserInstructions(browser) {
 // Function to handle the modal behavior
 document.addEventListener("DOMContentLoaded", function () {
     const downloadBtn = document.getElementById("downloadButton");
-    const toDownloadButton = document.getElementById("toDownloadButton");
 
     var modal = document.getElementById("myModal");
     var closeModalButton = document.getElementById("close");
@@ -60,11 +59,5 @@ document.addEventListener("DOMContentLoaded", function () {
         if (closeModalButton) {
             closeModalButton.addEventListener("click", closeModal);
         }
-    }
-
-    if (toDownloadButton) {
-        toDownloadButton.addEventListener("click", function () {
-            window.location.href = "download.html";
-        });
     }
 });
