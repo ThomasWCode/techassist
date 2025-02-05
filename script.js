@@ -10,12 +10,19 @@ function toDownloadScreen() {
     window.location.href = "download.html";
 }
 
+function closeModal() {
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+
 // Attach event listener
 document.addEventListener("DOMContentLoaded", function () {
     const downloadBtn = document.getElementById("downloadButton");
     const toDownloadButton = document.getElementById("toDownloadButton");
 
     var modal = document.getElementById("myModal");
+    var closeModalButton = document.getElementById("close");
 
     if (modal) {
         function showModal() {
@@ -25,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (downloadBtn) {
             downloadBtn.addEventListener("click", showModal);
         }
+
+        if (closeModalButton) {
+            closeModalButton.addEventListener("click", closeModal);
     }
     
     if (toDownloadButton) {
