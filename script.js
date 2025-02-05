@@ -19,7 +19,7 @@ function showBrowserInstructions(browser) {
     const instructionsElement = document.getElementById('browserInstructions');
     switch (browser) {
         case 'chrome':
-            instructionsElement.innerHTML = '<p>An down arrow should appear in the top right of Chrome. It will have a blue circle going round it.</p> <p>Once the download has finsished (circle gone), click on the down arrow to open a small menu.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on the arrow on the right point to the topleft with a box round it.</p>';
+            instructionsElement.innerHTML = "<p>An down arrow should appear in the top right of Chrome. It will have a blue circle going round it.</p> <p>Once the download has finsished (circle gone), click on the down arrow to open a small menu.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on the arrow on the right point to the topleft with a box round it.</p>";
             break;
         case 'firefox':
             instructionsElement.innerHTML = '<p>In Mozilla Firefox: After downloading, click the down arrow in the top right to open the downloaded file or go to the Downloads section in the menu.</p>';
