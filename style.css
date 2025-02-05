@@ -20,6 +20,10 @@
   background-color: rgb(135, 206, 235); /* change color on hover */
 }
 
+#current {
+  background-color: rgb(135, 206, 235);
+}
+
 #bold {
   font-weight: bold;
 }
