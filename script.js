@@ -1,19 +1,5 @@
-// Function to create a popup
-function showPopup(message) {
-    let popup = document.createElement("div");
-    popup.id = "downloadPopup";
-    popup.innerText = message;
-    document.body.appendChild(popup);
-}
-
 function toDownloadScreen() {
     window.location.href = "download.html";
-}
-
-function closeModal() {
-    if (modal) {
-        modal.style.display = "none";
-    }
 }
 
 // Attach event listener
@@ -27,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (modal) {
         function showModal() {
             modal.style.display = "block";
+        }
+
+        function closeModal() {
+            if (modal) {
+                modal.style.display = "none";
+            }
         }
 
         if (downloadBtn) {
