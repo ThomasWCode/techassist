@@ -16,9 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function closeModal() {
-            if (modal) {
-                modal.style.display = "none";
-            }
+            modal.style.display = "none";
         }
 
         if (downloadBtn) {
