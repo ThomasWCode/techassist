@@ -3,9 +3,7 @@
   align-items: center;
 }
 
-.topbar .logo {
-  width=20px;
-  height: auto;
+.logo {
   margin-right: 20px;
 }
 
