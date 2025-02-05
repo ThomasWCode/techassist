@@ -19,13 +19,10 @@ function showBrowserInstructions(browser) {
     const instructionsElement = document.getElementById('browserInstructions');
     switch (browser) {
         case 'chrome':
-            instructionsElement.innerHTML = '<p>In Google Chrome: After downloading, you can find the file in the bottom left corner of your browser. Click to run it or navigate to your Downloads folder.</p>';
+            instructionsElement.innerHTML = '<p>An down arrow should appear in the top right of Chrome. It will have a blue circle going round it.</p> <p>Once the download has finsished (circle gone), click on the down arrow to open a small menu.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on the arrow on the right point to the topleft with a box round it.</p>';
             break;
         case 'firefox':
             instructionsElement.innerHTML = '<p>In Mozilla Firefox: After downloading, click the down arrow in the top right to open the downloaded file or go to the Downloads section in the menu.</p>';
-            break;
-        case 'safari':
-            instructionsElement.innerHTML = '<p>In Safari: After downloading, find the file in the Downloads folder or at the top-right corner of the browser.</p>';
             break;
         case 'edge':
             instructionsElement.innerHTML = '<p>In Microsoft Edge: After downloading, click the down arrow in the top right or go to your Downloads folder.</p>';
