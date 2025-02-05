@@ -24,6 +24,10 @@
   color: rgb(135, 206, 250);
 }
 
+#current:hover {
+ color: rgb(0, 191, 255);
+}
+
 #bold {
   font-weight: bold;
 }
