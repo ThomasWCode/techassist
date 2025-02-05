@@ -3,6 +3,12 @@
   align-items: center;
 }
 
+.logo {
+  width=10%;
+  height: auto;
+  margin-right: 20px;
+}
+
 .nav {
   background-color: rgb(10, 122, 188);
   height: 100%; /* changed to 100% */
