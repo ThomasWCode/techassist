@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (closeModalButton) {
             closeModalButton.addEventListener("click", closeModal);
+        }
     }
     
     if (toDownloadButton) {
