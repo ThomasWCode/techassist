@@ -10,6 +10,7 @@
 .nav {
   background-color: rgb(10, 122, 188);
   height: 100%; /* changed to 100% */
+  width: 100%;
   display: flex; /* added flexbox for vertical centering */
   flex-direction: column; /* stack links vertically */
 }
