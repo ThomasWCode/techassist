@@ -7,10 +7,6 @@
   text-align: center;
 }
 
-.logo a p {
-  text-decoration: none;
-}
-
 .nav {
   background-color: rgb(10, 122, 188);
   height: 100%; /* changed to 100% */
