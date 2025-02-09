@@ -17,9 +17,15 @@ function detectBrowser() {
 // Function to display browser-specific instructions in the modal
 function showBrowserInstructions(browser) {
     const instructionsElement = document.getElementById('browserInstructions');
+    
+    // Check for Edge specifically
+    if (navigator.userAgent.indexOf('Edge') !== -1) {
+        browser = 'edge'; // Force detection as Edge
+    }
+
     switch (browser) {
         case 'chrome':
-            instructionsElement.innerHTML = "<p>An down arrow should appear in the top right of Chrome. It will have a blue circle going round it.</p> <p>Once the download has finsished (circle gone), click on the down arrow to open a small menu.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on the arrow on the right point to the topleft with a box round it.</p>";
+            instructionsElement.innerHTML = "<p>An down arrow should appear in the top right of Chrome. It will have a blue circle going round it.</p> <p>Once the download has finished (circle gone), click on the down arrow to open a small menu.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on the arrow on the right point to the topleft with a box round it.</p>";
             break;
         case 'firefox':
             instructionsElement.innerHTML = '<p>In Mozilla Firefox: After downloading, click the down arrow in the top right to open the downloaded file or go to the Downloads section in the menu.</p>';
@@ -28,7 +34,7 @@ function showBrowserInstructions(browser) {
             instructionsElement.innerHTML = '<p>In Microsoft Edge: After downloading, click the down arrow in the top right or go to your Downloads folder.</p>';
             break;
         default:
-            instructionsElement.innerHTML = '<p>After downloading, locate the file in your Downloads folder and click to run it.</p>';
+            instructionsElement.innerHTML = '<p>After downloading, open file explorer, go to your downloads and double-left-click on TechAssist_Setup.exe</p>';
             break;
     }
 }
