@@ -22,16 +22,16 @@ function showBrowserInstructions(browser) {
 
     switch (browser) {
         case 'chrome':
-            instructionsElement.innerHTML = "<p>A down arrow should appear in the top right of Chrome. It will have a blue circle going round it.</p> <p>Once the download has finished (circle gone), click on the down arrow to open a small menu.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on the arrow on the right pointing to the top-left with a box around it.</p>";
+            instructionsElement.innerHTML = "<p>There should be a down arrow in the top right of Chrome. It will have a circle going round it.</p> <p>Once the download has finished (circle completed), click on the down arrow to open a small menu.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on the arrow on the right pointing to the top-left with a box around it.</p> <br> <p>Chrome may say that TechAssist is a 'suspicious file'. This is because we are not yet a widely recognised software. Please ignore this warning by clicking on the arrow on the right of the warning and then 'Download Suspicious File'.";
             break;
         case 'firefox':
-            instructionsElement.innerHTML = '<p>In Mozilla Firefox: After downloading, click the down arrow in the top right to open the downloaded file or go to the Downloads section in the menu.</p>';
+            instructionsElement.innerHTML = "<p>There should be a down arrow in the top right of Firefox. It will have a circle going round it.</p> <p>Once the download has finished (circle completed), click on the down arrow to open a small menu, if not already open.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on 'Open File' under the name.</p>";
             break;
         case 'edge':
-            instructionsElement.innerHTML = '<p>In Microsoft Edge: After downloading, click the down arrow in the top right or go to your Downloads folder.</p>';
+            instructionsElement.innerHTML = "<p>There should be a down arrow in the top right of Firefox. It will have a circle going round it.</p> <p>Once the download has finished (circle completed), click on the down arrow to open a small menu, if not already open.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on 'Open File' under the name.</p>";
             break;
         default:
-            instructionsElement.innerHTML = '<p>After downloading, open file explorer, go to your downloads, and double-left-click on TechAssist_Setup.exe</p>';
+            instructionsElement.innerHTML = "<p>There should be a down arrow in the top right of your browser. It will have a circle going round it.</p> <p>Once the download has finished (circle completed), click on the down arrow to open a small menu, if not already open.</p> <p>Then hover over 'TechAssist_Setup.exe' and click on 'Open File' under the name. If there is no 'Open File', then look for an arrow on the right pointing to the top-left with a box around it.</p>";
             break;
     }
 }
