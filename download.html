@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://techassistuk.vercel.app/logo.png" type="image/x-icon">
+    <title>TechAssist - Download</title>
+</head>
+<body>
+    <div class="topbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="TechAssist Logo" width=80 height=auto>
+                <p style="text-decoration: none;">TechAssist</p>
+            </a>
+        </div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a id="current" href="download.html">→ Download TechAssist</a>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    
+    <center><h1>Download TechAssist</h1></center>
+
+    <a href="https://techassistuk.vercel.app/TechAssist_Setup.exe" id="downloadLink">
+        <center><button id="downloadButton">Click here to start the download of TechAssist for Windows</button></center>
+    </a>
+        
+    <br>
+    <br>
+
+    <p>The above button will open a new web page and may warn you that the file is too large to be scanned for viruses. This is simply because the file is large, it does not mean that google has detected any dangerous material in the file. Please click 'Download Anyway'.</p>
+    
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="close">&times;</span>
+            <p>Starting download... Please wait</p>
+            <div id="browserInstructions"></div> <!-- This will be filled dynamically -->
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
