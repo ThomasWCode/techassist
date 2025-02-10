@@ -227,7 +227,7 @@ button:hover {
 }
 
 .input:focus ~ .placeholder {
-  color: #dc2f55;
+  color: rgb(135, 206, 235);
 }
 
 .submit {
