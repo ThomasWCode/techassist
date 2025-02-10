@@ -1,3 +1,17 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyCKSRHBsb1-EWH4jhDinK9xmuJvw6SsSVU",
+  authDomain: "techassist-50e7d.firebaseapp.com",
+  databaseURL: "https://techassist-50e7d-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "techassist-50e7d",
+  storageBucket: "techassist-50e7d.firebasestorage.app",
+  messagingSenderId: "462373877165",
+  appId: "1:462373877165:web:54d8626a578c5cdd1a9d24",
+  measurementId: "G-5GFJ2VMHFK"
+};
+
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
 // Function to detect the user's browser
 function detectBrowser() {
     const userAgent = navigator.userAgent.toLowerCase();
@@ -36,6 +50,33 @@ function showBrowserInstructions(browser) {
     }
 }
 
+function submitContactRequest() {
+    var nameInput = document.getElementById("name");
+    var messageInput = document.getElementById("message");
+    var emailInput = document.getElementById("email");
+
+    var name = nameInput.value;
+    var message = messageInput.value;
+    var email = emailInput.value;
+
+    if (name && email && message) {
+        var timestamp = Date.now();
+        var contactRef = database.ref("ContactRequests/" + timestamp);
+
+        contactRef.set({
+            name: name,
+            email: email,
+            message: message
+        }).then(() => {
+            alert("Contact request submitted successfully!");
+        }).catch((error) => {
+            console.error("Error submitting request:", error);
+        });
+    } else {
+        alert("Please fill in all fields.");
+    }
+}
+    
 // Function to handle the modal behavior
 document.addEventListener("DOMContentLoaded", function () {
     const downloadBtn = document.getElementById("downloadButton");
@@ -43,10 +84,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var modal = document.getElementById("myModal");
     var closeModalButton = document.getElementById("close");
 
+    var submitButton = document.getElementById("submit");
+    submitButton.addEventListener("click", submitContactRequest);
+    
     if (modal) {
         function showModal() {
             modal.style.display = "block";
-            // Detect the browser and show instructions
+            
             const browser = detectBrowser();
             showBrowserInstructions(browser);
         }
