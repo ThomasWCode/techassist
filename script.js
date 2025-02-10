@@ -88,10 +88,12 @@ function submitContactRequest() {
     });
 }
 
-// Close success popup
-document.getElementById("closeSuccessPopup").addEventListener("click", function () {
+
+function closeSuccessPopup() {
     document.getElementById("successPopup").style.display = "none";
-});
+}
+
+document.getElementById("closeSuccessPopup").addEventListener("click", closeSuccessPopup);
     
 // Function to handle the modal behavior
 document.addEventListener("DOMContentLoaded", function () {
