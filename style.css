@@ -164,11 +164,11 @@ button:hover {
 }
 
 .ic1 {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .ic2 {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .input {
@@ -197,7 +197,7 @@ button:hover {
 }
 
 .cut-short {
-  width: 20px;
+  width: 50px;
 }
 
 .input:focus ~ .cut,
