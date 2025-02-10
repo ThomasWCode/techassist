@@ -206,7 +206,7 @@ button:hover {
 }
 
 .placeholder {
-  color: #65657b;
+  color: rgb(135, 206, 235);
   font-family: sans-serif;
   left: 20px;
   line-height: 14px;
