@@ -58,26 +58,31 @@ function submitContactRequest() {
     var messageInput = document.getElementById("message");
     var emailInput = document.getElementById("email");
 
-    var name = nameInput.value;
-    var message = messageInput.value;
-    var email = emailInput.value;
+    var name = nameInput.value.trim();
+    var message = messageInput.value.trim();
+    var email = emailInput.value.trim();
 
-    if (name && email && message) {
-        var timestamp = Date.now();
-        var contactRef = database.ref("ContactRequests/" + timestamp);
-
-        contactRef.set({
-            name: name,
-            email: email,
-            message: message
-        }).then(() => {
-            alert("Contact request submitted successfully!");
-        }).catch((error) => {
-            console.error("Error submitting request:", error);
-        });
-    } else {
-        alert("Please fill in all fields.");
+    if (!name || !message || !email) {
+        alert("Please fill out all fields.");
+        return;
     }
+
+    var timestamp = Date.now();
+    var contactRef = ref(database, `ContactRequests/${timestamp}`);
+
+    set(contactRef, {
+        name: name,
+        email: email,
+        message: message
+    }).then(() => {
+        alert("Your contact request has been submitted successfully.");
+        nameInput.value = "";
+        messageInput.value = "";
+        emailInput.value = "";
+    }).catch((error) => {
+        console.error("Error submitting contact request: ", error);
+        alert("Failed to submit contact request. Please try again.");
+    });
 }
     
 // Function to handle the modal behavior
