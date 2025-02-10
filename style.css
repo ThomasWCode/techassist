@@ -185,7 +185,7 @@ button:hover {
 }
 
 .cut {
-  background-color: #15172b;
+  background-color: rgb(10, 122, 188);
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -231,7 +231,7 @@ button:hover {
 }
 
 .submit {
-  background-color: rgb(135, 206, 235);
+  background-color: #08d;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
