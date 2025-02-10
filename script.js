@@ -1,3 +1,6 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCKSRHBsb1-EWH4jhDinK9xmuJvw6SsSVU",
   authDomain: "techassist-50e7d.firebaseapp.com",
