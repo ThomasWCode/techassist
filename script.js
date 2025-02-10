@@ -1,16 +1,19 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+// Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCKSRHBsb1-EWH4jhDinK9xmuJvw6SsSVU",
-  authDomain: "techassist-50e7d.firebaseapp.com",
-  databaseURL: "https://techassist-50e7d-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "techassist-50e7d",
-  storageBucket: "techassist-50e7d.firebasestorage.app",
-  messagingSenderId: "462373877165",
-  appId: "1:462373877165:web:54d8626a578c5cdd1a9d24",
-  measurementId: "G-5GFJ2VMHFK"
+    apiKey: "AIzaSyCKSRHBsb1-EWH4jhDinK9xmuJvw6SsSVU",
+    authDomain: "techassist-50e7d.firebaseapp.com",
+    databaseURL: "https://techassist-50e7d-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "techassist-50e7d",
+    storageBucket: "techassist-50e7d.firebasestorage.app",
+    messagingSenderId: "462373877165",
+    appId: "1:462373877165:web:54d8626a578c5cdd1a9d24",
+    measurementId: "G-5GFJ2VMHFK"
 };
-
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 // Function to detect the user's browser
 function detectBrowser() {
