@@ -9,7 +9,7 @@
 
 .logo a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .nav {
@@ -66,6 +66,10 @@
   color: rgb(0, 191, 255);
 }
 
+#bold {
+  font-weight: bold;
+}
+
 p {
   font-size: 20px;
   margin: 10px;
@@ -73,13 +77,17 @@ p {
 
 button {
   padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
   cursor: pointer;
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid #008CBA;
   font-size: x-large;
-  transition-duration: 0.4s;
 }
 
 button:hover {
@@ -87,13 +95,51 @@ button:hover {
   color: white;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+#close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Contact Form */
 .form {
   background-color: rgb(10, 122, 188);
   border-radius: 20px;
+  box-sizing: border-box;
+  height: auto;
   padding: 20px;
   width: 80%;
-  max-width: 500px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -113,8 +159,16 @@ button:hover {
 }
 
 .input-container {
+  height: auto;
   position: relative;
   width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
   margin-top: 30px;
 }
 
@@ -126,13 +180,12 @@ button:hover {
   color: rgb(135, 206, 235);
   font-size: 18px;
   outline: 0;
-  padding: 10px 15px;
+  padding: 10px;
   width: 100%;
 }
 
-/* Make textarea resizable */
-.textarea {
-  min-height: 100px;
+textarea.input {
+  height: 150px;
   resize: vertical;
 }
 
@@ -143,6 +196,8 @@ button:hover {
   left: 20px;
   position: absolute;
   top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
   width: 68px;
 }
 
@@ -150,29 +205,46 @@ button:hover {
   width: 50px;
 }
 
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
 .placeholder {
   color: rgb(135, 206, 235);
   font-family: sans-serif;
   left: 20px;
+  line-height: 14px;
+  pointer-events: none;
   position: absolute;
-  top: 20px;
+  transform-origin: 0 50%;
   transition: transform 200ms, color 200ms;
+  top: 20px;
 }
 
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: rgb(135, 206, 235);
+}
+
+.input:focus ~ .placeholder {
   color: rgb(135, 206, 235);
 }
 
 .submit {
   background-color: #08d;
   border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
   color: #eee;
   cursor: pointer;
   font-size: 18px;
   height: 50px;
-  margin-top: 38px;
+  margin-top: 20px;
   width: 100%;
 }
 
