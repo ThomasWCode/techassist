@@ -75,24 +75,23 @@ function submitContactRequest() {
         email: email,
         message: message
     }).then(() => {
-        // Clear input fields
+        // Clear inputs
         nameInput.value = "";
         messageInput.value = "";
         emailInput.value = "";
 
-        // Display success modal
-        var successModal = document.getElementById("successModal");
-        successModal.style.display = "block";
-
-        // Close the modal after 3 seconds
-        setTimeout(() => {
-            successModal.style.display = "none";
-        }, 3000);
+        // Show success popup
+        document.getElementById("successPopup").style.display = "block";
     }).catch((error) => {
         console.error("Error submitting contact request: ", error);
         alert("Failed to submit contact request. Please try again.");
     });
 }
+
+// Close success popup
+document.getElementById("closeSuccessPopup").addEventListener("click", function () {
+    document.getElementById("successPopup").style.display = "none";
+});
     
 // Function to handle the modal behavior
 document.addEventListener("DOMContentLoaded", function () {
