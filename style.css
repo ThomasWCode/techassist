@@ -223,7 +223,7 @@ button:hover {
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
-  color: #808097;
+  color: rgb(135, 206, 235);
 }
 
 .input:focus ~ .placeholder {
