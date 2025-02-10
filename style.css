@@ -193,7 +193,7 @@ button:hover {
   top: -20px;
   transform: translateY(0);
   transition: transform 200ms;
-  width: 66px;
+  width: 68px;
 }
 
 .cut-short {
