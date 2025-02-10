@@ -36,6 +36,7 @@
 }
 
 .contactButtonContainer {
+  margin-left: 10px;
   background-color: rgb(10, 122, 188);
   height: 100%; /* changed to 100% */
   display: flex; /* added flexbox for vertical centering */
