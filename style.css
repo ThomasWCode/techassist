@@ -35,9 +35,12 @@
   background-color: rgb(135, 206, 235); /* change color on hover */
 }
 
+.contactButtonContainer {
+  background-color: rgb(10, 122, 188);
+}
+
 .contactButton {
   text-align: center;
-  background-color: rgb(10, 122, 188);
   font-size: x-large;
   text-decoration: none;
   font-weight: bold;
