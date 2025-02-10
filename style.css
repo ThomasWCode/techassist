@@ -339,12 +339,12 @@ textarea.input {
     margin-top: 15px;
     padding: 8px 15px;
     border: none;
-    background-color: #4bb71b;
+    background-color: #08d;
     color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #closeSuccessPopup:hover {
-    background-color: #3a9b14;
+    background-color: rgb(135, 206, 235);
 }
