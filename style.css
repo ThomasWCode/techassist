@@ -38,7 +38,7 @@
 .contactButton {
   background-color: rgb(10, 122, 188);
   height: 100%; /* changed to 100% */
-  width: 100%;
+  width: 30%;
   font-size: x-large;
   text-decoration: none;
   font-weight: bold;
