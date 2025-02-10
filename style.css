@@ -236,7 +236,7 @@ textarea.input {
   color: rgb(135, 206, 235);
 }
 
-.submit {
+#submit {
   background-color: #08d;
   border-radius: 12px;
   border: 0;
@@ -249,6 +249,6 @@ textarea.input {
   width: 100%;
 }
 
-.submit:active {
+#submit:active {
   background-color: rgb(135, 206, 235);
 }
