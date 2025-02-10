@@ -35,6 +35,21 @@
   background-color: rgb(135, 206, 235); /* change color on hover */
 }
 
+.contactButton {
+  font-size: x-large;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 10px; /* added padding for box */
+  margin: 5px; /* added margin for spacing */
+  border: 2px solid white; /* added border */
+  transition: background-color 0.3s ease; /* smooth transition */
+}
+
+.contactButton:hover {
+  background-color: rgb(135, 206, 235); /* change color on hover */
+}
+  
 #current {
   color: rgb(135, 206, 250);
 }
