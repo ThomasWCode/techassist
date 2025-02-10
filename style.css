@@ -184,10 +184,6 @@ button:hover {
   width: 100%;
 }
 
-#message {
-   height: 200%;
-}
-
 .cut {
   background-color: rgb(10, 122, 188);
   border-radius: 10px;
