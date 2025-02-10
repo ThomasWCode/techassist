@@ -75,10 +75,19 @@ function submitContactRequest() {
         email: email,
         message: message
     }).then(() => {
-        alert("Your contact request has been submitted successfully.");
+        // Clear input fields
         nameInput.value = "";
         messageInput.value = "";
         emailInput.value = "";
+
+        // Display success modal
+        var successModal = document.getElementById("successModal");
+        successModal.style.display = "block";
+
+        // Close the modal after 3 seconds
+        setTimeout(() => {
+            successModal.style.display = "none";
+        }, 3000);
     }).catch((error) => {
         console.error("Error submitting contact request: ", error);
         alert("Failed to submit contact request. Please try again.");
