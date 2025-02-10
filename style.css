@@ -133,7 +133,7 @@ button:hover {
 }
 
 .form {
-  background-color: #15172b;
+  background-color: rgb(10, 122, 188);
   border-radius: 20px;
   box-sizing: border-box;
   height: 500px;
@@ -231,7 +231,7 @@ button:hover {
 }
 
 .submit {
-  background-color: #08d;
+  background-color: rgb(135, 206, 235);
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
