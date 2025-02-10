@@ -90,10 +90,10 @@ function submitContactRequest() {
 
 
 function closeSuccessPopup() {
-    document.getElementById("successPopup").style.display = "none";
+    
 }
 
-document.getElementById("closeSuccessPopup").addEventListener("click", closeSuccessPopup);
+
     
 // Function to handle the modal behavior
 document.addEventListener("DOMContentLoaded", function () {
@@ -103,7 +103,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var closeModalButton = document.getElementById("close");
 
     var submitButton = document.getElementById("submit");
-    submitButton.addEventListener("click", submitContactRequest);
+    var closeSuccessPopupButton = document.getElementById("closeSuccessPopup")
+    if (submitButton) {
+        submitButton.addEventListener("click", submitContactRequest);
+    }
+    if (closeSuccessPopupButton) {
+        closeSuccessPopupButton.addEventListener("click", function () {
+            document.getElementById("successPopup").style.display = "none";
+        });
+    }
     
     if (modal) {
         function showModal() {
