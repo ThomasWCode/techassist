@@ -285,9 +285,9 @@ textarea.input {
     border-radius: 50%;
     display: block;
     stroke-width: 2;
-    stroke: #4bb71b;
+    stroke: rgb(10, 122, 188);
     stroke-miterlimit: 10;
-    box-shadow: inset 0px 0px 0px #4bb71b;
+    box-shadow: inset 0px 0px 0px rgb(10, 122, 188);
     animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
     position: relative;
     top: 5px;
@@ -300,7 +300,7 @@ textarea.input {
     stroke-dashoffset: 166;
     stroke-width: 2;
     stroke-miterlimit: 10;
-    stroke: #4bb71b;
+    stroke: rgb(10, 122, 188);
     fill: #fff;
     animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 }
@@ -330,7 +330,7 @@ textarea.input {
 
 @keyframes fill {
     100% {
-        box-shadow: inset 0px 0px 0px 30px #4bb71b;
+        box-shadow: inset 0px 0px 0px 30px rgb(10, 122, 188);
     }
 }
 
